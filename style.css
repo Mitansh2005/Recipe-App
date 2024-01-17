@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&family=Roboto:wght@400;500;700&display=swap');
+  *{
+    box-sizing: border-box;
+    margin: 0;
+   }
+
+   body{
+    background: #ECE9E6;  
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+    display: flex;
+    font-family: 'poppins',sans-serif;
+    margin: 0;
+    min-height: 100vh;
+   }
+   img{
+    max-width:100% ;
+   }
+   .mobile-container{
+    background-color: #fff;
+    box-shadow: 0 0 10px 2px #3333331a;
+    border-radius: 3px ;
+    overflow: hidden;
+    margin: auto;
+    width:100%;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+   }
+   
+   header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+   }
+   header input{
+    font-family: roboto;
+    border: none;
+    width: 50vh;
+    background-color: #eee;
+    border-radius: 3px;
+    padding: 1rem 1rem;
+    font-size: 2vh;
+    outline: none;
+    font-weight: bold;
+   }
+
+   .search-icon{
+    width: 4vh;
+   }
+   header button{
+    background-color: transparent;
+    color: #ff9500;
+    border: none;
+    margin-left: 10px;
+
+   }
+   .fav-container{
+    background-color: rgba(251, 172, 13, 0.795); 
+    padding:0.5rem 1rem;
+    text-align: center;
+    z-index: 0;
+   }
+   .fav-meals{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+   }
+   .fav-meals li{
+    cursor: pointer;
+    position: relative;
+    margin: 5px;
+    width: 85px;
+   }
+   .fav-meals li .clear{
+    background-color: transparent;
+    position: absolute;
+    top: -3px;
+    left: -8px;
+    opacity: 0;
+    font-size:25px;
+    color:black;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.4s ease-in-out;
+   }
+   .fav-meals li .clear:hover{
+    color: red;
+    opacity: 1;
+   }
+   .fav-meals li img{
+    border: 3px solid #ffffff8a;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 2px #26262689;
+    object-fit: cover;
+    width: 70px;
+    position: relative;
+    height: 70px;
+   }
+   .fav-meals li span{
+    display: inline-block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 75px;
+   }
+   .meal{
+    margin-right: 2vh;
+   }
+   .meals{
+    margin: 24px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: -2px 1px 5px 2px #26262657;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+   }
+   .meal-header{
+    position: relative;
+   }
+   .meal-header .random{
+    position: absolute;
+    font-weight:600;
+    top: 20px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-top-right-radius:4px ;
+    border-bottom-right-radius:4px ;
+    color: rgb(65, 65, 65);
+    background-color: #fff;
+   }
+   .meal-header img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+   }
+   .meal-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+   }
+   .meal-body h4{
+    margin: 0;
+   }
+   .meal-body .fav-btn{
+    background-color: transparent;
+    color: rgb(119, 119, 119);
+    border:none;
+    font-size: 1.3rem;
+    cursor: pointer;
+   }
+   .fav-btn:hover{
+    color: rgb(232, 44, 44);
+   }
+   .meal-body .fav-btn.active{
+    color: rgb(232, 44, 44);
+   }   
+
+   .popup-container{
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+   }
+   .popup-container.hidden{
+    opacity: 0;
+    pointer-events: none;
+   }
+   .popup{
+    max-width: 600px;
+    width: 100%;
+    background-color: white;
+    padding:  0rem 2rem 0rem 2rem;
+    position: relative;
+    border-radius: 5px;
+    max-height: 100vh;
+    overflow:auto;
+   }
+   .meal-info h1{
+    text-align: center;
+   }
+   .popup .close-popup{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 30px;
+    background-color: transparent;
+    border:none;
+    cursor: pointer ;
+   }
+ 
+  @media screen and (max-width:500px){
+    body{
+      display: block;
+    }
+  }
